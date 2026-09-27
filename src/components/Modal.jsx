@@ -2,7 +2,7 @@ import "../styles/Modal.css";
 import { getTargetWord } from "../utils/getTargetWord";
 
 export const Modal = ({ children, isOpen, setIsOpen, isMobile, setGuesses, setGameOver, setGameWon, setTargetWord }) => {
-    const openHeight = !isMobile ? "40%" : "65%";
+    const openHeight = !isMobile ? "40%" : "400px";
     const openWidth = !isMobile ? "30%" : "90%";
     
     return (
