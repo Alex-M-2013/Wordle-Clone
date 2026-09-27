@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/MADE%20WITH-REACT-61DAFB?style=for-the-badge&logo=react" alt="Made with React">
   <img src="https://img.shields.io/github/repo-size/Alex-M-2013/Wordle-Clone?style=for-the-badge&logo=github" alt="Repo Size">
 
-  __Link:__ placeholder
+  __Link:__ placeholder <br>
   A simple clone of NYT's [Wordle](https://www.nytimes.com/games/wordle/index.html).
 </div>
 
