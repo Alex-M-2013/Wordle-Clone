@@ -24,7 +24,7 @@ const errorToastOptions = {
 const showErrorToast = (message, id) => toast(message, {...errorToastOptions, toastId: id});
 
 export const Wordle = () => {
-    const targetWord = getTargetWord()
+    const [targetWord, setTargetWord] = useState(getTargetWord());
     const maxAttempts = 6;
 
     const [guesses, setGuesses] = useState([]);
@@ -77,7 +77,7 @@ export const Wordle = () => {
                 </>
             )}
 
-            <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen} setGuesses={setGuesses} setGameOver={setGameOver} setGameWon={setGameWon}>
+            <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen} setGuesses={setGuesses} setGameOver={setGameOver} setGameWon={setGameWon} setTargetWord={setTargetWord}>
                 {gameOver && (
                     <>
                         <h1>😔 Game Over</h1>

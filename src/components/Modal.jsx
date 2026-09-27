@@ -1,6 +1,7 @@
 import "../styles/Modal.css";
+import { getTargetWord } from "../utils/getTargetWord";
 
-export const Modal = ({ children, isOpen, setIsOpen, setGuesses, setGameOver, setGameWon }) => {
+export const Modal = ({ children, isOpen, setIsOpen, setGuesses, setGameOver, setGameWon, setTargetWord }) => {
     return (
         <>
             <div id="modal-background" style={{ visibility: isOpen ? "visible" : "hidden" }}></div>
@@ -14,6 +15,7 @@ export const Modal = ({ children, isOpen, setIsOpen, setGuesses, setGameOver, se
                         setGuesses([]);
                         setGameOver(false);
                         setGameWon(false);
+                        setTargetWord(getTargetWord());
                     }}
                 >
                     Play Again
