@@ -12,6 +12,7 @@
 
 ## Features
 - Dark and Light themes
+- Mobile friendly
 
 ## Running the project
   
