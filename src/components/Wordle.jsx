@@ -80,19 +80,19 @@ export const Wordle = () => {
 
             <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen} setGuesses={setGuesses} setGameOver={setGameOver} setGameWon={setGameWon}>
                 {gameOver && (
-                    <p>
+                    <>
                         <h1>😔 Game Over</h1>
                         <Divider isOpen={isModalOpen} />
                         <p>{`Game Over! The word was: ${targetWord}.`}</p>
                         <p>Play again?</p>
-                    </p>
+                    </>
                 )}
                 {gameWon && (
-                    <p>
+                    <>
                         <h1>🥳 Congratulations!</h1>
                         <Divider isOpen={isModalOpen} />
                         <p>You win! Play again?</p>
-                    </p>
+                    </>
                 )}
             </Modal>
         </div>

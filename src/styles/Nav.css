@@ -3,17 +3,10 @@
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 2rem;
-
     height: 10dvh;
-    max-height: 85px;
     width: 100dvw;
 
     background-color: var(--element-bg);
-
-    position: absolute;
-    top: 0;
-    left: 0;
 
     h1 {
         margin-left: 2rem;

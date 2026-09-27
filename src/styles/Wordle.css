@@ -1,12 +1,10 @@
 #wordle-container {
-    width: 75dvw;
-    height: 65dvh;
+    width: 100dvw;
+    height: 90dvh;
 
-    background-color: var(--element-bg);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background-color: var(--body-bg);
 
     padding: 2rem;
-    border-radius: 2rem;
 
     input {
         background-color: var(--body-bg);

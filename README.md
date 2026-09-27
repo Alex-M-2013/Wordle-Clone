@@ -1,16 +1,46 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  # Wordle Clone
 
-Currently, two official plugins are available:
+  <img src="https://deploy-badge.vercel.app/vercel/placeholder?style=for-the-badge" alt="Vercel Deploy"><br>
+  <img src="https://img.shields.io/badge/MADE%20WITH-REACT-61DAFB?style=for-the-badge&logo=react" alt="Made with React">
+  <img src="https://img.shields.io/github/repo-size/Alex-M-2013/Wordle-Clone?style=for-the-badge&logo=github" alt="Repo Size">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+  __Link:__ placeholder
+  A simple clone of NYT's [Wordle](https://www.nytimes.com/games/wordle/index.html).
+</div>
 
-## React Compiler
+## Features
+- Mobile friendly
+- Dark and Light themes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Running the project
+  
+### Requirements:
+- [NodeJS](https://nodejs.org/en)
 
-## Expanding the ESLint configuration
+### Steps:
+1. Clone the repo:
+```
+git clone https://github.com/Alex-M-2013/Wordle-Clone.git
+```
+> If you don't have Git, click the "Code" button at the top and click "Download ZIP", then extract its contents
+2. In the project root, run: 
+```
+npm i
+```
+3. Run the App:  
+```
+npm run dev
+```
+4. View the app at [localhost:5173](http://localhost:5173)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Credits
+
+### Inspired By: 
+- [Word Tuah](https://brainrot-games.netlify.app/)
+
+### Icons From:
+- [Bootstrap Icons](https://icons.getbootstrap.com/)
+<br><br>
