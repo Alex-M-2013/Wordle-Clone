@@ -40,6 +40,10 @@ npm run dev
 ### Inspired By: 
 - [Word Tuah](https://brainrot-games.netlify.app/)
 
+### Data from: 
+- Valid wordle words: https://gist.github.com/dracos/dd0668f281e685bad51479e5acaadb93
+- Wordle target words: https://gist.github.com/cfreshman/a03ef2cba789d8cf00c08f767e0fad7b
+
 ### Icons From:
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 <br><br>
