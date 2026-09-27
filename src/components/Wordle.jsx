@@ -1,6 +1,7 @@
 import "../styles/Wordle.css";
 import { useState, useRef } from "react";
 import { toast, Slide, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import { getTargetWord } from "../utils/getTargetWord";
 import { isValidGuess } from "../utils/verifyGuess";
 import { Row } from "./Row";
