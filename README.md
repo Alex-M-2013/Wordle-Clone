@@ -11,7 +11,6 @@
 </div>
 
 ## Features
-- Mobile friendly
 - Dark and Light themes
 
 ## Running the project
