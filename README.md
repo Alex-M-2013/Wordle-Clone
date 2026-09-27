@@ -46,4 +46,3 @@ npm run dev
 
 ### Icons From:
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
-<br><br>
