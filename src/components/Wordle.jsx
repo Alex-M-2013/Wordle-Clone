@@ -1,7 +1,7 @@
 import "../styles/Wordle.css";
 import { useState, useRef } from "react";
 import { toast, Slide, ToastContainer } from "react-toastify";
-// import { getTargetWord } from "../utils/getTargetWord";
+import { getTargetWord } from "../utils/getTargetWord";
 import { isValidGuess } from "../utils/verifyGuess";
 import { Row } from "./Row";
 import { Modal } from "./Modal";
@@ -24,8 +24,7 @@ const errorToastOptions = {
 const showErrorToast = (message, id) => toast(message, {...errorToastOptions, toastId: id});
 
 export const Wordle = () => {
-    // const targetWord = getTargetWord()
-    const targetWord = "REACT";
+    const targetWord = getTargetWord()
     const maxAttempts = 6;
 
     const [guesses, setGuesses] = useState([]);
