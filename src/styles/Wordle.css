@@ -2,6 +2,10 @@
     width: 100dvw;
     height: 90dvh;
 
+    @media (max-width: 600px) {
+        height: 500px;
+    }
+
     background-color: var(--body-bg);
 
     padding: 2rem;

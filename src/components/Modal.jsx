@@ -1,12 +1,15 @@
 import "../styles/Modal.css";
 import { getTargetWord } from "../utils/getTargetWord";
 
-export const Modal = ({ children, isOpen, setIsOpen, setGuesses, setGameOver, setGameWon, setTargetWord }) => {
+export const Modal = ({ children, isOpen, setIsOpen, isMobile, setGuesses, setGameOver, setGameWon, setTargetWord }) => {
+    const openHeight = !isMobile ? "40%" : "65%";
+    const openWidth = !isMobile ? "30%" : "90%";
+    
     return (
         <>
             <div id="modal-background" style={{ visibility: isOpen ? "visible" : "hidden" }}></div>
 
-            <div id="modal" style={{ visibility: isOpen ? "visible" : "hidden", height: isOpen ? "40%" : "0", width: isOpen ? "30%" : "0" }}>
+            <div id="modal" style={{ visibility: isOpen ? "visible" : "hidden", height: isOpen ? openHeight : "0", width: isOpen ? openWidth : "0" }}>
                 <p style={{ visibility: isOpen ? "visible" : "hidden" }}>{children}</p>
                 <button
                     style={{ visibility: isOpen ? "visible" : "hidden" }}
