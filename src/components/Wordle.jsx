@@ -1,10 +1,27 @@
 import "../styles/Wordle.css";
 import { useState, useRef } from "react";
+import { toast, Slide, ToastContainer } from "react-toastify";
 // import { getTargetWord } from "../utils/getTargetWord";
 import { isValidGuess } from "../utils/verifyGuess";
 import { Row } from "./Row";
 import { Modal } from "./Modal";
 import { Divider } from "./Divider";
+
+const errorToastOptions = {
+    position: "top-center",
+    autoClose: 2000,
+    hideProgressBar: true,
+    transition: Slide,
+    style: {
+        color: "white",
+        background: "linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%)",
+        borderRadius: "8px",
+        border: "none",
+        boxShadow: "none",
+    },
+};
+
+const showErrorToast = (message, id) => toast(message, {...errorToastOptions, toastId: id});
 
 export const Wordle = () => {
     // const targetWord = getTargetWord()
@@ -17,21 +34,18 @@ export const Wordle = () => {
     const inputRef = useRef("");
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [errorMessage, setErrorMessage] = useState("");
 
     const handleGuess = (guess) => {
         if (gameOver || gameWon) return;
         else if (guess.length !== 5) {
-            setErrorMessage("Guess must be 5 letters");
+            showErrorToast("Guess must be 5 letters", "guess-length-error");
             inputRef.current.value = "";
             return;
         } else if (!isValidGuess(guess)) {
-            setErrorMessage("Unrecognised word");
+            showErrorToast("Unrecognised word", "unrecognised-word");
             inputRef.current.value = "";
             return;
         }
-
-        setErrorMessage("");
 
         const updatedGuesses = [...guesses, guess];
         setGuesses(updatedGuesses);
@@ -50,6 +64,7 @@ export const Wordle = () => {
 
     return (
         <div id="wordle-container">
+            <ToastContainer />
             <h1>Wordle</h1>
             {guesses.map((guess, i) => (
                 <Row key={i} guess={guess} targetWord={targetWord} />
@@ -63,7 +78,6 @@ export const Wordle = () => {
                 </>
             )}
 
-            <Error message={errorMessage} />
             <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen} setGuesses={setGuesses} setGameOver={setGameOver} setGameWon={setGameWon}>
                 {gameOver && (
                     <p>
@@ -84,9 +98,3 @@ export const Wordle = () => {
         </div>
     );
 };
-
-const Error = ({ message }) => (
-    <p className="error" style={{ display: message !== "" ? "" : "none" }}>
-        {message}
-    </p>
-);
