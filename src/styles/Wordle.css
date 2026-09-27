@@ -1,0 +1,54 @@
+#wordle-container {
+    width: 75dvw;
+    height: 65dvh;
+
+    background-color: var(--element-bg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    padding: 2rem;
+    border-radius: 2rem;
+
+    input {
+        background-color: var(--body-bg);
+        color: var(--font-colour);
+
+        padding: 0.65rem 1rem;
+        margin: 0.5rem;
+
+        border-radius: 50px;
+        border: 1px solid var(--font-colour);
+    }
+}
+
+#guess-button {
+    padding: 0.65rem 1.25rem;
+    margin: 0.5rem;
+
+    border: none;
+    border-radius: 50px;
+
+    background-color: #0fa40f;
+    color: white;
+
+    transition: background-color 0.2s ease;
+
+    @media (max-width: 600px) {
+        transition: background-color 0.1s ease;
+    }
+
+    &:hover {
+        background-color: green;
+
+        @media (max-width: 600px) {
+            background-color: #0fa40f;
+        }
+    }
+
+    &:active {
+        background-color: green;
+    }
+}
+
+.error {
+    color: red;
+}
