@@ -10,7 +10,7 @@ export const Modal = ({ children, isOpen, setIsOpen, isMobile, setGuesses, setGa
             <div id="modal-background" style={{ visibility: isOpen ? "visible" : "hidden" }}></div>
 
             <div id="modal" style={{ visibility: isOpen ? "visible" : "hidden", height: isOpen ? openHeight : "0", width: isOpen ? openWidth : "0" }}>
-                <p style={{ visibility: isOpen ? "visible" : "hidden" }}>{children}</p>
+                {children}
                 <button
                     style={{ visibility: isOpen ? "visible" : "hidden" }}
                     onClick={() => {
